@@ -18,11 +18,9 @@
 <meta name="twitter:title" content="Peacemaker Cyber Cave | Medical CPD Points &amp; License Renewal" />
 <meta name="twitter:description" content="Learn. Earn. Renew. Accredited CPD points for Kenyan healthcare professionals." />
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230b1f3a'/%3E%3Ctext x='50' y='66' font-size='58' text-anchor='middle' fill='%23d9a441' font-family='Georgia,serif'%3EP%3C/text%3E%3C/svg%3E" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,wght@1,500;1,600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
 <script type="application/ld+json">
 {
@@ -44,62 +42,32 @@
 
 <style>
   :root{
-    --paper:#f6f2e7;
-    --paper-raised:#fffdf8;
-    --ink:#0b1f3a;
-    --ink-soft:#3a4a63;
-    --navy:#12294f;
-    --navy-deep:#081527;
-    --gold:#c8912f;
-    --gold-bright:#e0ac48;
-    --teal:#2f6f6b;
-    --line:rgba(11,31,58,0.16);
-    --line-strong:rgba(11,31,58,0.32);
-    --shadow:0 1px 2px rgba(11,31,58,0.06);
-    --radius-doc:2px;
-    --accent-on-dark:#e0ac48;
-  }
-
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --paper:#0c1a2e;
-      --paper-raised:#122544;
-      --ink:#f2ede0;
-      --ink-soft:#b7c2d6;
-      --navy:#f2ede0;
-      --navy-deep:#f6f2e7;
-      --gold:#e0ac48;
-      --gold-bright:#f0c064;
-      --teal:#6fb3ac;
-      --line:rgba(242,237,224,0.16);
-      --line-strong:rgba(242,237,224,0.32);
-      --shadow:0 1px 2px rgba(0,0,0,0.4);
-    }
-  }
-  :root[data-theme="dark"]{
-    --paper:#0c1a2e;
-    --paper-raised:#122544;
-    --ink:#f2ede0;
-    --ink-soft:#b7c2d6;
-    --navy:#f2ede0;
-    --navy-deep:#f6f2e7;
-    --gold:#e0ac48;
-    --gold-bright:#f0c064;
-    --teal:#6fb3ac;
-    --line:rgba(242,237,224,0.16);
-    --line-strong:rgba(242,237,224,0.32);
-    --shadow:0 1px 2px rgba(0,0,0,0.4);
+    --green-deep:#0d2a1f;
+    --green:#173f2c;
+    --green-line:rgba(242,232,207,0.22);
+    --parchment:#f2e8cf;
+    --parchment-raised:#eaddb8;
+    --parchment-line:rgba(23,20,10,0.18);
+    --rust:#b3492c;
+    --rust-deep:#8f3a22;
+    --brass:#c9973f;
+    --brass-bright:#e0b563;
+    --ink:#1a160c;
+    --ink-soft:#4a4534;
+    --on-green:#f2e8cf;
+    --on-green-soft:#b9c9ba;
+    --shadow:0 10px 26px rgba(13,42,31,0.22);
   }
 
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
   body{
     margin:0;
-    background:var(--paper);
+    background:var(--parchment);
     color:var(--ink);
-    font-family:"Source Sans 3", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-family:"Newsreader", Georgia, "Times New Roman", serif;
     font-size:16px;
-    line-height:1.55;
+    line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
   @media (prefers-reduced-motion: reduce){
@@ -107,462 +75,235 @@
   }
 
   h1,h2,h3{
-    font-family:"Fraunces", Georgia, "Times New Roman", serif;
-    color:var(--ink);
+    font-family:"Archivo Black", "Arial Black", sans-serif;
+    text-transform:uppercase;
+    letter-spacing:-0.01em;
     text-wrap:balance;
     margin:0;
+    line-height:0.98;
+  }
+  .script{
+    font-family:"Fraunces", Georgia, serif;
+    font-style:italic;
     font-weight:600;
+    text-transform:none;
+    letter-spacing:0;
   }
   .eyebrow{
     font-family:"Space Mono", ui-monospace, monospace;
     font-size:0.72rem;
-    letter-spacing:0.14em;
+    letter-spacing:0.16em;
     text-transform:uppercase;
-    color:var(--gold);
     font-weight:700;
   }
   p{margin:0;}
   a{color:inherit;}
   img,svg{max-width:100%;display:block;}
 
-  .wrap{
-    max-width:1120px;
-    margin:0 auto;
-    padding:0 24px;
-  }
-  .measure{max-width:62ch;}
+  .wrap{max-width:1160px; margin:0 auto; padding:0 24px;}
+  .measure{max-width:56ch;}
 
-  /* ---------- header ---------- */
+  /* ================= perforation dividers ================= */
+  .perf{height:26px; background-repeat:repeat-x; background-position:center; background-size:26px 26px;}
+  .perf-gp{background-color:var(--parchment); background-image:radial-gradient(circle, var(--green) 7px, transparent 7.3px);}
+  .perf-pg{background-color:var(--green); background-image:radial-gradient(circle, var(--parchment) 7px, transparent 7.3px);}
+  .perf-pr{background-color:var(--rust); background-image:radial-gradient(circle, var(--parchment) 7px, transparent 7.3px);}
+  .perf-rg{background-color:var(--green); background-image:radial-gradient(circle, var(--rust) 7px, transparent 7.3px);}
+
+  /* ================= header ================= */
   header.site{
     position:sticky; top:0; z-index:40;
-    background:var(--paper);
-    border-bottom:1px solid var(--line);
+    background:var(--green-deep);
+    border-bottom:1px solid var(--brass);
   }
-  .nav-row{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:16px 0;
-    gap:16px;
-  }
-  .brand{
-    display:flex; align-items:center; gap:10px;
-    font-family:"Fraunces", serif;
-    font-weight:600;
-    font-size:1.15rem;
-    text-decoration:none;
-    color:var(--ink);
-  }
+  .nav-row{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:16px;}
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--on-green);}
   .brand .mark{
-    width:34px;height:34px;border-radius:50%;
-    background:var(--navy-deep);
-    color:var(--gold-bright);
-    display:flex;align-items:center;justify-content:center;
-    font-family:"Fraunces", serif;
-    font-weight:700;
-    font-size:1.05rem;
+    width:38px; height:38px; border-radius:50%;
+    border:1.5px solid var(--brass);
+    display:flex; align-items:center; justify-content:center;
+    font-family:"Archivo Black", sans-serif; font-size:0.85rem; color:var(--brass-bright);
     flex:none;
   }
-  .brand .tagline{
-    display:block;
-    font-family:"Space Mono", monospace;
-    font-size:0.62rem;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    font-weight:400;
-    margin-top:2px;
-  }
-  nav.links{
-    display:flex; gap:28px;
-    font-size:0.92rem;
-    font-weight:600;
-  }
-  nav.links a{text-decoration:none; color:var(--ink-soft);}
-  nav.links a:hover{color:var(--gold);}
-  .nav-cta{
-    display:flex; align-items:center; gap:14px;
-  }
+  .brand .name{font-family:"Archivo Black", sans-serif; font-size:1.02rem; letter-spacing:0.01em; text-transform:uppercase;}
+  .brand .tag{display:block; font-family:"Space Mono", monospace; font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--on-green-soft); margin-top:2px;}
+  nav.links{display:flex; gap:26px; font-family:"Space Mono", monospace; font-size:0.76rem; letter-spacing:0.05em; text-transform:uppercase;}
+  nav.links a{text-decoration:none; color:var(--on-green-soft);}
+  nav.links a:hover{color:var(--brass-bright);}
+  @media (max-width:760px){nav.links{display:none;}}
+
   .btn{
     display:inline-flex; align-items:center; justify-content:center; gap:8px;
-    padding:11px 20px;
-    border-radius:var(--radius-doc);
-    font-weight:700;
-    font-size:0.92rem;
-    text-decoration:none;
-    border:1px solid transparent;
-    cursor:pointer;
-    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+    padding:12px 22px;
+    font-family:"Space Mono", monospace; font-size:0.8rem; font-weight:700;
+    letter-spacing:0.06em; text-transform:uppercase;
+    text-decoration:none; border:1.5px solid transparent; cursor:pointer;
+    transition:transform .15s ease, background .15s ease;
   }
-  .btn:focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
-  .btn-gold{background:var(--gold); color:var(--navy-deep);}
-  .btn-gold:hover{background:var(--gold-bright); transform:translateY(-1px);}
-  .btn-line{background:transparent; color:var(--ink); border-color:var(--line-strong);}
-  .btn-line:hover{border-color:var(--gold); color:var(--gold);}
-  @media (max-width: 760px){
-    nav.links{display:none;}
-  }
+  .btn:focus-visible{outline:2px solid var(--brass-bright); outline-offset:2px;}
+  .btn-stamp{background:var(--rust); color:var(--parchment); border-color:var(--brass); transform:rotate(-1.2deg);}
+  .btn-stamp:hover{background:var(--rust-deep); transform:rotate(-1.2deg) translateY(-2px);}
+  .btn-ghost-dark{background:transparent; color:var(--on-green); border-color:var(--on-green-soft);}
+  .btn-ghost-dark:hover{border-color:var(--brass-bright); color:var(--brass-bright);}
+  .btn-ghost-light{background:transparent; color:var(--ink); border-color:var(--ink-soft);}
+  .btn-ghost-light:hover{border-color:var(--rust); color:var(--rust);}
 
-  /* ---------- hero ---------- */
-  .hero{
-    padding:64px 0 56px;
-    border-bottom:1px solid var(--line);
-    position:relative;
-    overflow:hidden;
-  }
-  .hero-grid{
-    display:grid;
-    grid-template-columns:1.1fr 0.9fr;
-    gap:56px;
-    align-items:center;
-  }
-  @media (max-width:880px){
-    .hero-grid{grid-template-columns:1fr;}
-  }
-  .hero h1{
-    font-size:clamp(2.1rem, 4.4vw, 3.35rem);
-    line-height:1.06;
-    margin-top:14px;
-  }
-  .hero h1 em{
-    font-style:italic;
-    color:var(--teal);
-  }
-  .hero-sub{
-    margin-top:20px;
-    font-size:1.08rem;
-    color:var(--ink-soft);
-    max-width:52ch;
-  }
-  .hero-actions{
-    display:flex; gap:14px; flex-wrap:wrap;
-    margin-top:30px;
-  }
-  .council-strip{
-    margin-top:34px;
-    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
-  }
-  .council-strip .label{
-    font-family:"Space Mono", monospace;
-    font-size:0.68rem;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-  }
-  .council-pills{display:flex; gap:8px; flex-wrap:wrap;}
-  .council-pill{
-    font-family:"Space Mono", monospace;
-    font-size:0.72rem;
-    font-weight:700;
-    letter-spacing:0.04em;
-    padding:5px 10px;
-    border:1px solid var(--line-strong);
-    border-radius:3px;
-    color:var(--ink-soft);
-  }
+  section{padding:76px 0;}
+  .section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:48px; flex-wrap:wrap;}
+  .section-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);}
 
-  /* certificate visual */
-  .cert{
-    background:var(--paper-raised);
-    border:1px solid var(--line-strong);
-    box-shadow:var(--shadow);
-    padding:32px 28px;
-    position:relative;
-  }
-  .cert::before{
+  /* ================= hero ================= */
+  .hero{background:var(--green-deep); color:var(--on-green); overflow:hidden; position:relative;}
+  .hero::before{
     content:"";
-    position:absolute; inset:8px;
-    border:1px solid var(--line);
+    position:absolute; inset:14px;
+    border:1px solid rgba(201,151,63,0.35);
     pointer-events:none;
   }
-  .cert-top{
-    display:flex; justify-content:space-between; align-items:flex-start;
-    gap:12px;
+  .hero-grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:48px; align-items:center; padding:64px 0 56px;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr; padding:48px 0;}}
+  .hero .eyebrow{color:var(--brass-bright);}
+  .hero h1{
+    font-size:clamp(2.6rem, 6.4vw, 4.6rem);
+    margin-top:16px;
+    color:var(--parchment);
   }
-  .cert-serial{
-    font-family:"Space Mono", monospace;
-    font-size:0.68rem;
-    color:var(--ink-soft);
-    letter-spacing:0.04em;
-  }
-  .cert-seal{
-    width:46px;height:46px;border-radius:50%;
-    border:2px solid var(--gold);
-    display:flex;align-items:center;justify-content:center;
-    color:var(--gold);
-    font-family:"Fraunces",serif;
-    font-weight:700;
-    font-size:1rem;
-    flex:none;
-  }
-  .cert h3{
-    margin-top:22px;
-    font-size:1.3rem;
-  }
-  .cert-points{
-    margin-top:22px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:16px 20px;
-  }
-  .cert-points .stat b{
-    display:block;
-    font-family:"Space Mono", monospace;
-    font-size:1.7rem;
-    color:var(--teal);
-    font-variant-numeric:tabular-nums;
-  }
-  .cert-points .stat span{
-    font-size:0.76rem;
-    color:var(--ink-soft);
-    letter-spacing:0.03em;
-  }
-  .cert-foot{
-    margin-top:26px;
-    padding-top:16px;
-    border-top:1px dashed var(--line-strong);
-    display:flex; justify-content:space-between; align-items:center;
-    font-family:"Space Mono", monospace;
-    font-size:0.72rem;
-    color:var(--ink-soft);
-  }
-  .cert-foot .status{
-    color:var(--teal);
-    font-weight:700;
-  }
+  .hero h1 span{display:block;}
+  .hero h1 .script{color:var(--brass-bright); font-size:0.55em; display:block; margin:6px 0;}
+  .hero-sub{margin-top:22px; font-size:1.12rem; color:var(--on-green-soft); max-width:50ch;}
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-top:34px;}
 
-  /* ---------- section shell ---------- */
-  section{padding:72px 0;}
-  section + section{border-top:1px solid var(--line);}
-  .section-head{
-    display:flex; justify-content:space-between; align-items:flex-end; gap:24px;
-    margin-bottom:44px;
-    flex-wrap:wrap;
+  .council-strip{margin-top:38px; display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+  .council-strip .label{font-family:"Space Mono", monospace; font-size:0.66rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--on-green-soft);}
+  .council-pills{display:flex; gap:10px; flex-wrap:wrap;}
+  .stamp-tag{
+    font-family:"Space Mono", monospace; font-size:0.72rem; font-weight:700; letter-spacing:0.04em;
+    padding:5px 11px; border:1px solid var(--brass); color:var(--brass-bright); border-radius:2px;
   }
-  .section-head h2{font-size:clamp(1.6rem,3vw,2.15rem);}
-  .section-head .eyebrow{margin-bottom:10px; display:block;}
+  .stamp-tag:nth-child(2n){transform:rotate(-2deg);}
+  .stamp-tag:nth-child(3n){transform:rotate(1.5deg);}
 
-  /* ---------- register (who we serve) ---------- */
-  .register{
-    border-top:1px solid var(--line-strong);
-  }
+  /* seal */
+  .seal-wrap{display:flex; justify-content:center;}
+  .seal{width:min(280px, 80%); animation:spin 40s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  /* ================= register ================= */
+  .register-section{background:var(--parchment);}
+  .register-section .eyebrow{color:var(--rust);}
+  .register{border-top:2px solid var(--ink);}
   .register-row{
-    display:grid;
-    grid-template-columns:2.4fr 1fr 1.6fr;
-    gap:20px;
-    align-items:center;
-    padding:22px 0;
-    border-bottom:1px solid var(--line);
+    display:grid; grid-template-columns:2.3fr 1fr 1.7fr; gap:20px; align-items:center;
+    padding:24px 0; border-bottom:1px dashed var(--parchment-line);
   }
-  @media (max-width:700px){
-    .register-row{grid-template-columns:1fr; gap:6px; padding:20px 0;}
-  }
-  .register-row .who{
-    display:flex; align-items:baseline; gap:14px;
-  }
-  .register-row .who .no{
-    font-family:"Space Mono", monospace;
-    color:var(--gold);
-    font-weight:700;
-    font-size:0.85rem;
-    flex:none;
-  }
-  .register-row .who h3{
-    font-size:1.15rem;
-    font-weight:600;
-  }
-  .register-row .board{
-    font-family:"Space Mono", monospace;
-    font-size:0.76rem;
-    color:var(--ink-soft);
-    letter-spacing:0.03em;
-  }
+  @media (max-width:700px){.register-row{grid-template-columns:1fr; gap:6px; padding:20px 0;}}
+  .register-row .who{display:flex; align-items:baseline; gap:14px;}
+  .register-row .who .no{font-family:"Space Mono", monospace; color:var(--rust); font-weight:700; font-size:0.85rem; flex:none;}
+  .register-row .who h3{font-size:1.15rem; text-transform:none; font-family:"Newsreader",serif; font-weight:600; letter-spacing:0;}
+  .register-row .board{font-family:"Space Mono", monospace; font-size:0.76rem; color:var(--ink-soft); letter-spacing:0.03em;}
   .register-row .board b{color:var(--ink); font-weight:700;}
-  .register-row .desc{
-    font-size:0.92rem;
-    color:var(--ink-soft);
-  }
+  .register-row .desc{font-size:0.92rem; color:var(--ink-soft);}
 
-  /* ---------- process ---------- */
-  .steps{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:0;
-    border:1px solid var(--line-strong);
-  }
-  @media (max-width:880px){
-    .steps{grid-template-columns:repeat(2,1fr);}
-  }
-  @media (max-width:520px){
-    .steps{grid-template-columns:1fr;}
-  }
+  /* ================= process (coupon tickets) ================= */
+  .process-section{background:var(--green); color:var(--on-green);}
+  .process-section .eyebrow{color:var(--brass-bright);}
+  .process-section h2{color:var(--parchment);}
+  .steps{display:flex; gap:26px; flex-wrap:wrap;}
   .step{
-    padding:28px 24px;
-    border-right:1px solid var(--line);
-    border-bottom:1px solid var(--line);
+    flex:1 1 230px;
+    background:var(--parchment);
+    color:var(--ink);
+    border:1.5px dashed var(--ink-soft);
+    padding:26px 22px;
     position:relative;
+    box-shadow:var(--shadow);
   }
-  .steps .step:nth-child(4n){border-right:none;}
-  @media (max-width:880px){
-    .steps .step:nth-child(2n){border-right:none;}
-    .steps .step:nth-child(4n){border-right:1px solid var(--line);}
-  }
-  @media (max-width:520px){
-    .steps .step{border-right:none !important;}
-  }
-  .step .num{
-    font-family:"Space Mono", monospace;
-    font-size:0.78rem;
-    color:var(--gold);
-    font-weight:700;
-  }
-  .step h3{
-    font-size:1.02rem;
-    margin-top:12px;
-    font-weight:600;
-    font-family:"Source Sans 3", sans-serif;
-  }
-  .step p{
-    margin-top:8px;
-    font-size:0.88rem;
-    color:var(--ink-soft);
-  }
+  .step:nth-child(1){transform:rotate(-1.4deg);}
+  .step:nth-child(2){transform:rotate(0.9deg);}
+  .step:nth-child(3){transform:rotate(-0.7deg);}
+  .step:nth-child(4){transform:rotate(1.3deg);}
+  .step .num{font-family:"Space Mono", monospace; font-size:0.78rem; color:var(--rust); font-weight:700;}
+  .step h3{font-size:1.02rem; margin-top:12px; text-transform:none; font-family:"Newsreader",serif; font-weight:600; letter-spacing:0;}
+  .step p{margin-top:8px; font-size:0.86rem; color:var(--ink-soft);}
 
-  /* ---------- why choose ---------- */
-  .why-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:28px;
-  }
+  /* ================= why choose ================= */
+  .why-section{background:var(--parchment);}
+  .why-section .eyebrow{color:var(--rust);}
+  .why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:30px;}
   @media (max-width:880px){.why-grid{grid-template-columns:repeat(2,1fr);}}
   @media (max-width:520px){.why-grid{grid-template-columns:1fr;}}
-  .why-item .icon{
-    width:40px;height:40px;
-    color:var(--teal);
-    margin-bottom:16px;
-  }
-  .why-item h3{
-    font-size:1.02rem;
-    font-family:"Source Sans 3", sans-serif;
-    font-weight:700;
-  }
-  .why-item p{
-    margin-top:8px;
-    font-size:0.9rem;
-    color:var(--ink-soft);
-  }
+  .why-item{border-top:2px solid var(--rust); padding-top:18px;}
+  .why-item .icon{width:36px; height:36px; color:var(--rust); margin-bottom:16px;}
+  .why-item h3{font-size:1rem; text-transform:none; font-family:"Newsreader",serif; font-weight:700; letter-spacing:0;}
+  .why-item p{margin-top:8px; font-size:0.9rem; color:var(--ink-soft);}
 
-  /* ---------- pricing ---------- */
-  .price-panel{
-    background:var(--navy-deep);
-    color:var(--paper);
-    padding:48px 40px;
-    display:grid;
-    grid-template-columns:1.2fr 1fr;
-    gap:40px;
-    align-items:center;
-    border:1px solid var(--line-strong);
+  /* ================= pricing: ticket stub ================= */
+  .pricing-section{background:var(--rust); color:var(--parchment);}
+  .pricing-section .eyebrow{color:var(--parchment);}
+  .ticket{
+    display:grid; grid-template-columns:1.4fr 1fr;
+    background:var(--parchment); color:var(--ink);
+    box-shadow:var(--shadow);
+    position:relative;
   }
-  @media (max-width:800px){
-    .price-panel{grid-template-columns:1fr; padding:36px 26px;}
+  @media (max-width:760px){.ticket{grid-template-columns:1fr;}}
+  .ticket-main{padding:40px 40px 40px 44px;}
+  .ticket-main h2{font-size:clamp(1.5rem,3vw,2.1rem); color:var(--ink);}
+  .ticket-main p{margin-top:16px; font-size:0.98rem; color:var(--ink-soft); max-width:44ch;}
+  .ticket-stub{
+    padding:40px 32px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+    border-left:2px dashed var(--ink-soft);
+    position:relative;
   }
-  .price-panel h2{color:var(--paper); font-size:clamp(1.5rem,3vw,2rem);}
-  .price-panel p{color:rgba(246,242,231,0.72); margin-top:14px; font-size:0.98rem;}
-  .price-card{
-    background:rgba(246,242,231,0.06);
-    border:1px solid rgba(246,242,231,0.24);
-    padding:26px;
-    text-align:center;
+  .ticket-stub::before,.ticket-stub::after{
+    content:""; position:absolute; left:-13px; width:26px; height:26px; border-radius:50%;
+    background:var(--rust);
   }
-  .price-card .amount{
-    font-family:"Space Mono", monospace;
-    font-size:2.6rem;
-    color:var(--gold-bright);
-    font-weight:700;
-    font-variant-numeric:tabular-nums;
+  .ticket-stub::before{top:-13px;}
+  .ticket-stub::after{bottom:-13px;}
+  @media (max-width:760px){
+    .ticket-stub{border-left:none; border-top:2px dashed var(--ink-soft);}
+    .ticket-stub::before{top:-13px; left:calc(50% - 13px);}
+    .ticket-stub::after{bottom:auto; top:-13px; left:auto; right:calc(50% - 13px);}
   }
-  .price-card .amount sup{font-size:1rem; margin-right:4px;}
-  .price-card .per{
-    font-size:0.78rem;
-    color:rgba(246,242,231,0.6);
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    margin-top:4px;
-  }
-  .price-card .btn{width:100%; margin-top:18px;}
+  .ticket-stub .eyebrow{color:var(--rust);}
+  .ticket-stub .amount{font-family:"Archivo Black", sans-serif; font-size:3rem; color:var(--rust); font-variant-numeric:tabular-nums; margin-top:10px;}
+  .ticket-stub .amount sup{font-family:"Space Mono", monospace; font-size:0.9rem; margin-right:4px;}
+  .ticket-stub .per{font-family:"Space Mono", monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); margin-top:2px;}
+  .ticket-stub .btn{margin-top:20px; width:100%;}
 
-  /* ---------- contact ---------- */
-  .contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-  }
+  /* ================= contact ================= */
+  .contact-section{background:var(--green-deep); color:var(--on-green);}
+  .contact-section .eyebrow{color:var(--brass-bright);}
+  .contact-section h2{color:var(--parchment);}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px;}
   @media (max-width:800px){.contact-grid{grid-template-columns:1fr;}}
-  .contact-list{
-    display:flex; flex-direction:column; gap:18px;
-    margin-top:24px;
-  }
+  .contact-list{display:flex; flex-direction:column; gap:16px; margin-top:26px;}
   .contact-list a{
-    display:flex; align-items:center; gap:14px;
-    text-decoration:none;
-    color:var(--ink);
-    font-weight:600;
-    padding:14px 16px;
-    border:1px solid var(--line-strong);
-    transition:border-color .15s ease, background .15s ease;
+    display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--on-green); font-weight:600;
+    padding:16px 18px; border:1px solid var(--green-line); transition:border-color .15s ease, background .15s ease;
   }
-  .contact-list a:hover{border-color:var(--teal); background:rgba(47,111,107,0.06);}
-  .contact-list .ic{
-    width:20px;height:20px;color:var(--teal); flex:none;
-  }
-  .contact-list small{
-    display:block;
-    font-family:"Space Mono", monospace;
-    font-size:0.68rem;
-    color:var(--ink-soft);
-    font-weight:400;
-    letter-spacing:0.03em;
-  }
+  .contact-list a:hover{border-color:var(--brass); background:rgba(201,151,63,0.08);}
+  .contact-list .ic{width:20px; height:20px; color:var(--brass-bright); flex:none;}
+  .contact-list small{display:block; font-family:"Space Mono", monospace; font-size:0.68rem; color:var(--on-green-soft); font-weight:400; letter-spacing:0.03em;}
 
-  /* ---------- footer ---------- */
-  footer{
-    padding:36px 0;
-    border-top:1px solid var(--line);
-  }
-  .foot-row{
-    display:flex; justify-content:space-between; align-items:center;
-    gap:16px; flex-wrap:wrap;
-    font-size:0.82rem;
-    color:var(--ink-soft);
-  }
-  .foot-row .brand{font-size:0.95rem;}
+  footer{background:var(--green-deep); border-top:1px solid var(--brass); padding:32px 0;}
+  .foot-row{display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; font-family:"Space Mono", monospace; font-size:0.72rem; letter-spacing:0.03em; color:var(--on-green-soft);}
+  .foot-row .brand-mini{color:var(--brass-bright); font-weight:700; text-transform:uppercase;}
 
-  /* ---------- floating whatsapp ---------- */
   .wa-float{
-    position:fixed;
-    right:22px; bottom:22px;
-    z-index:50;
+    position:fixed; right:22px; bottom:22px; z-index:50;
     display:flex; align-items:center; gap:10px;
-    background:#25D366;
-    color:#0b1f0f;
-    padding:14px;
-    border-radius:50px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.28);
-    text-decoration:none;
-    font-weight:700;
-    font-size:0.9rem;
-    border:none;
+    background:#25D366; color:#0b1f0f;
+    padding:14px; border-radius:50px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.32);
+    text-decoration:none; font-weight:700; font-size:0.9rem; border:none;
   }
-  .wa-float svg{width:26px;height:26px;flex:none;color:#fff;}
-  .wa-float .wa-text{
-    max-width:0;
-    overflow:hidden;
-    white-space:nowrap;
-    transition:max-width .25s ease, padding .25s ease;
-    color:#0b1f0f;
-  }
+  .wa-float svg{width:26px; height:26px; flex:none; color:#fff;}
+  .wa-float .wa-text{max-width:0; overflow:hidden; white-space:nowrap; transition:max-width .25s ease, padding .25s ease;}
   .wa-float:hover .wa-text{max-width:160px; padding-right:4px;}
-  @media (max-width:600px){
-    .wa-float{right:16px; bottom:16px; padding:14px;}
-  }
+  @media (max-width:600px){.wa-float{right:16px; bottom:16px;}}
 </style>
 </head>
 <body>
@@ -570,21 +311,19 @@
 <header class="site">
   <div class="wrap nav-row">
     <a class="brand" href="#top">
-      <span class="mark">P</span>
+      <span class="mark">PCC</span>
       <span>
-        Peacemaker Cyber Cave
-        <span class="tagline">Learn &middot; Earn &middot; Renew</span>
+        <span class="name">Peacemaker Cyber Cave</span>
+        <span class="tag">Learn &middot; Earn &middot; Renew</span>
       </span>
     </a>
     <nav class="links">
-      <a href="#serve">Who we serve</a>
-      <a href="#process">How it works</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#serve">Register</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Fee</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="nav-cta">
-      <a class="btn btn-gold" href="https://wa.me/254726938306?text=Hi%20Peacemaker%20Cyber%20Cave%2C%20I%27d%20like%20to%20renew%20my%20CPD%20points." target="_blank" rel="noopener">WhatsApp Us</a>
-    </div>
+    <a class="btn btn-ghost-dark" href="https://wa.me/254726938306?text=Hi%20Peacemaker%20Cyber%20Cave%2C%20I%27d%20like%20to%20renew%20my%20CPD%20points." target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </header>
 
@@ -594,57 +333,56 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">Accredited CPD Provider &middot; Kenya</span>
-        <h1>Keep your practising licence <em>current</em>, without the queue.</h1>
-        <p class="hero-sub">
-          Peacemaker Cyber Cave delivers accredited Continuing Professional Development points online, then walks you through renewal &mdash; built for nurses, clinicians, medical officers, laboratory technologists and pharmaceutical technologists across Kenya.
-        </p>
+        <span class="eyebrow">Notice of CPD Accreditation &middot; Kenya</span>
+        <h1>
+          <span>Renew Your</span>
+          <span>Licence</span>
+          <span class="script">without the queue</span>
+        </h1>
+        <p class="hero-sub">Peacemaker Cyber Cave issues accredited Continuing Professional Development points online, then walks you through renewal &mdash; for nurses, clinicians, medical officers, laboratory technologists and pharmaceutical technologists across Kenya.</p>
         <div class="hero-actions">
-          <a class="btn btn-gold" href="https://wa.me/254726938306?text=Hi%20Peacemaker%20Cyber%20Cave%2C%20I%27d%20like%20to%20renew%20my%20CPD%20points." target="_blank" rel="noopener">Start your renewal &rarr;</a>
-          <a class="btn btn-line" href="tel:+254726938306">Call 0726 938 306</a>
+          <a class="btn btn-stamp" href="https://wa.me/254726938306?text=Hi%20Peacemaker%20Cyber%20Cave%2C%20I%27d%20like%20to%20renew%20my%20CPD%20points." target="_blank" rel="noopener">Start Renewal &rarr;</a>
+          <a class="btn btn-ghost-dark" href="tel:+254726938306">Call 0726 938 306</a>
         </div>
         <div class="council-strip">
           <span class="label">Points recognised toward</span>
           <div class="council-pills">
-            <span class="council-pill">NCK</span>
-            <span class="council-pill">COC</span>
-            <span class="council-pill">KMPDC</span>
-            <span class="council-pill">KMLTTB</span>
-            <span class="council-pill">PPB</span>
+            <span class="stamp-tag">NCK</span>
+            <span class="stamp-tag">COC</span>
+            <span class="stamp-tag">KMPDC</span>
+            <span class="stamp-tag">KMLTTB</span>
+            <span class="stamp-tag">PPB</span>
           </div>
         </div>
       </div>
 
-      <div class="cert" role="img" aria-label="Sample CPD renewal record showing accredited points and active status">
-        <div class="cert-top">
-          <div>
-            <span class="eyebrow">CPD record</span>
-            <div class="cert-serial">FILE NO. PCC&ndash;2026&ndash;0300</div>
-          </div>
-          <div class="cert-seal">PCC</div>
-        </div>
-        <h3>Annual Renewal Bundle</h3>
-        <div class="cert-points">
-          <div class="stat"><b>25</b><span>CPD points earned</span></div>
-          <div class="stat"><b>100%</b><span>Online completion</span></div>
-          <div class="stat"><b>72 hrs</b><span>Avg. turnaround</span></div>
-          <div class="stat"><b>KES 300</b><span>Update fee</span></div>
-        </div>
-        <div class="cert-foot">
-          <span>Issued &middot; Peacemaker Cyber Cave</span>
-          <span class="status">&#9679; Licence active</span>
-        </div>
+      <div class="seal-wrap">
+        <svg class="seal" viewBox="0 0 240 240" role="img" aria-label="Peacemaker Cyber Cave official seal">
+          <defs>
+            <path id="sealcircle" d="M120,120 m-92,0 a92,92 0 1,1 184,0 a92,92 0 1,1 -184,0" />
+          </defs>
+          <circle cx="120" cy="120" r="112" fill="none" stroke="#c9973f" stroke-width="1.5" opacity="0.55" />
+          <circle cx="120" cy="120" r="92" fill="none" stroke="#c9973f" stroke-width="1.5" />
+          <circle cx="120" cy="120" r="70" fill="none" stroke="#c9973f" stroke-width="1" stroke-dasharray="2 5" />
+          <text font-family="Space Mono, monospace" font-size="11.5" letter-spacing="3" fill="#e0b563">
+            <textPath href="#sealcircle" startOffset="2%">PEACEMAKER CYBER CAVE &#9679; LEARN EARN RENEW &#9679;</textPath>
+          </text>
+          <text x="120" y="112" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="30" fill="#f2e8cf">PCC</text>
+          <text x="120" y="140" text-anchor="middle" font-family="Space Mono, monospace" font-size="10" letter-spacing="2" fill="#b9c9ba">EST. NAIROBI</text>
+        </svg>
       </div>
     </div>
   </section>
 
+  <div class="perf perf-gp"></div>
+
   <!-- WHO WE SERVE -->
-  <section id="serve">
+  <section class="register-section" id="serve">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <span class="eyebrow">Register of professions</span>
-          <h2>Built for every cadre on the register</h2>
+          <span class="eyebrow">Register of Professions</span>
+          <h2>Built for every&nbsp;cadre</h2>
         </div>
         <p class="measure" style="color:var(--ink-soft); font-size:0.95rem;">Whichever board licenses you, your CPD activities are mapped to the point categories your renewal form actually asks for.</p>
       </div>
@@ -679,33 +417,35 @@
     </div>
   </section>
 
+  <div class="perf perf-pg"></div>
+
   <!-- PROCESS -->
-  <section id="process">
+  <section class="process-section" id="process">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <span class="eyebrow">The process</span>
-          <h2>Four steps from sign-up to renewed licence</h2>
+          <span class="eyebrow">The Process</span>
+          <h2>Four steps to&nbsp;renewal</h2>
         </div>
       </div>
       <div class="steps">
         <div class="step">
-          <span class="num">01</span>
+          <span class="num">01 / TICKET</span>
           <h3>Register your cadre</h3>
           <p>Tell us your profession and licensing board so we assign the right point categories.</p>
         </div>
         <div class="step">
-          <span class="num">02</span>
-          <h3>Complete accredited activities</h3>
-          <p>Work through online modules at your own pace &mdash; on your phone or laptop, any time.</p>
+          <span class="num">02 / TICKET</span>
+          <h3>Complete activities</h3>
+          <p>Work through online modules at your own pace &mdash; phone or laptop, any time.</p>
         </div>
         <div class="step">
-          <span class="num">03</span>
-          <h3>Receive your certificate</h3>
-          <p>A valid certificate is issued for every completed activity, ready to attach to your file.</p>
+          <span class="num">03 / TICKET</span>
+          <h3>Receive certificate</h3>
+          <p>A valid certificate is issued for every completed activity, ready for your file.</p>
         </div>
         <div class="step">
-          <span class="num">04</span>
+          <span class="num">04 / TICKET</span>
           <h3>Submit for renewal</h3>
           <p>We guide you through submitting your points for licence renewal with your board.</p>
         </div>
@@ -713,13 +453,15 @@
     </div>
   </section>
 
+  <div class="perf perf-gp"></div>
+
   <!-- WHY CHOOSE -->
-  <section id="why">
+  <section class="why-section" id="why">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <span class="eyebrow">Why practitioners choose us</span>
-          <h2>Quality content, no wasted time</h2>
+          <span class="eyebrow">Why Practitioners Choose Us</span>
+          <h2>Quality content,<br>no wasted time</h2>
         </div>
       </div>
       <div class="why-grid">
@@ -731,7 +473,7 @@
         <div class="why-item">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 18v3"/></svg>
           <h3>Online &amp; flexible</h3>
-          <p>Study between shifts. Nothing to attend in person, nothing tied to a fixed schedule.</p>
+          <p>Study between shifts. Nothing to attend in person, nothing on a fixed schedule.</p>
         </div>
         <div class="why-item">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 15a5 5 0 100-10 5 5 0 000 10z"/><path d="M8.5 14l-1.5 6 5-2.5 5 2.5-1.5-6"/></svg>
@@ -747,31 +489,36 @@
     </div>
   </section>
 
+  <div class="perf perf-pr"></div>
+
   <!-- PRICING -->
-  <section id="pricing">
+  <section class="pricing-section" id="pricing">
     <div class="wrap">
-      <div class="price-panel">
-        <div>
-          <span class="eyebrow" style="color:var(--gold-bright);">Limited-time rate</span>
+      <span class="eyebrow">Limited-Time Rate</span>
+      <div class="ticket" style="margin-top:22px;">
+        <div class="ticket-main">
           <h2>Update your CPD points before the deadline</h2>
           <p>One flat fee covers your accredited activities and certificate for this renewal cycle. No hidden charges, no walk-in queue &mdash; everything is handled online and confirmed on WhatsApp.</p>
         </div>
-        <div class="price-card">
+        <div class="ticket-stub">
+          <span class="eyebrow">Admit One Renewal</span>
           <div class="amount"><sup>KES</sup>300</div>
           <div class="per">per CPD update</div>
-          <a class="btn btn-gold" href="https://wa.me/254726938306?text=Hi%2C%20I%27d%20like%20to%20pay%20for%20my%20CPD%20update%20(KES%20300)." target="_blank" rel="noopener">Update now</a>
+          <a class="btn btn-stamp" href="https://wa.me/254726938306?text=Hi%2C%20I%27d%20like%20to%20pay%20for%20my%20CPD%20update%20(KES%20300)." target="_blank" rel="noopener">Update Now</a>
         </div>
       </div>
     </div>
   </section>
 
+  <div class="perf perf-rg"></div>
+
   <!-- CONTACT -->
-  <section id="contact">
+  <section class="contact-section" id="contact">
     <div class="wrap contact-grid">
       <div>
-        <span class="eyebrow">Get in touch</span>
-        <h2>Inbox us for timely CPD update and licence renewal</h2>
-        <p class="measure" style="color:var(--ink-soft); margin-top:16px;">Message us your name, profession and licensing board, and we'll confirm your points and next renewal date the same day.</p>
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Inbox us for<br>timely renewal</h2>
+        <p class="measure" style="color:var(--on-green-soft); margin-top:18px;">Message us your name, profession and licensing board, and we'll confirm your points and next renewal date the same day.</p>
       </div>
       <div class="contact-list">
         <a href="https://wa.me/254726938306" target="_blank" rel="noopener">
@@ -794,7 +541,7 @@
 
 <footer>
   <div class="wrap foot-row">
-    <span class="brand">Peacemaker Cyber Cave</span>
+    <span class="brand-mini">Peacemaker Cyber Cave</span>
     <span>&copy; 2026 Peacemaker Cyber Cave, Kenya. Learn. Earn. Renew.</span>
   </div>
 </footer>
